@@ -1,0 +1,36 @@
+Part 1
+    1. What are the relevant features of the Titanic dataset?
+The relevant features are all but: ticket, name, cabin and port of embarkment
+    2. Can you find a parameter configuration to get a validation score greater than 62%?
+No
+    3. What are the advantages/disadvantages of K-means clustering?
+Advantages:
+    It is quite simple to implement
+    Scales easily to large datasets
+    Continually improving as there is no clear training phase
+Disadvantages:
+    Requires pre-specification of number of clusters (k)
+    Prone to skewing due to outliers in the dataset
+    
+    4. As the number of clusters is directly related to the columns in the dataset.
+    We can check the number of columns in the dataset and adapt the number of clusters to that.
+    
+    We can also pre-check the training data to ensure that outliers do not skew the training,
+    this can for example be accomplished by deleting the furthest n points of data in all columns.
+
+Part 2
+    1. How many clusters do you have?
+5
+    2. Plot the data to see how the clusters have actually been formed
+    3. What can you conclude from looking at the plot?
+They seem to be clustered correctly
+Part 3
+    1. Can you choose n_components = 2? Can you think of some method to test this?
+Yes, you can. However the size of some vectors need to be changed. By meassuring the variance ratio 
+of the principal components, we can see that those two components make up about 100% of the variance. high variance = high importance
+    2. Create the scatter plot of the third principal component (that is, you combine the third
+    principal component with the first and then the second principal component). What can
+    you see with the plot? What is the difference?
+Yes you can, the first two principal components makes up 87% of the variance, so the third principal component is not very important.
+    3. Can you tell which feature contributes more towards the PC?
+The lightest colors of the plot, mean concave points and mean concavity.

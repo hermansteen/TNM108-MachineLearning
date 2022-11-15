@@ -1,0 +1,13 @@
+Part 1:
+    1. Explain Gaussian Naive Bayes
+    Gaussian naive bayes works from the assumption that all features are independent of each other.
+    Based on this, we can make predictions according to a normal PDF which is calculated during the training phase, and then use these parameters to calculate the posterior probability for each class.
+Part 2:
+    1. Based on the upper half of a face the program, with various classifiers attempts to predict the lower half of the face.
+    2. Linear regression has the worst performance here, the faces appear very distorted and not realistic. The best classifier appears to be extra trees and in some cases KNN. However the results are still blurry and not perfect.
+    3. Varying case-by-case, we can see some of the best results from Random decision tree with max depth 20 and 50 features. The results are still not perfect, but they are much better than the other classifiers.
+    4. How can we improve the random forest classifier? We can use Haar-like features to extract the features from the images. This will improve the performance of the classifier.
+Part 3:
+    1. Yes, when reshuffling data set before cross validating the performance is much better.
+    2. No, the results appear to be a bit worse with RFE and reshuffling than with just reshuffling.
+    3. Higher number, better score.

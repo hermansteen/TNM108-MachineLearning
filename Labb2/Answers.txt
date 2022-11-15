@@ -1,0 +1,37 @@
+Part 1:
+1. When can you use linear regression?
+    Linear regression can be used when you want to determine a relationship in scattered data points.
+2. How can you generalize linear regression models to account for more complex relationships amongst the data?
+    Take a one dimensional input and project to several dimensions for a more complex relationship, by using basis functions.
+3. What are basis functions?
+    The basis functions transform the data to be a function which transforms the data in order to fit a more complex relationship.
+4. How many basis functions can you use in the same linear regression model?
+    You can use as many basis functions as you want, but the more you use the more complex the model will be.
+5. Can overfitting be a problem? If so, what can you do about it?
+    Overfitting can be a problem, and you can use regularization to prevent it, regularization punishes large values of the model parameters.
+
+Part 2:
+1. Why is choosing a good value for k important in KNN?
+    Choosing a good value for k is important because it determines how many neighbors are used to classify the data point.
+2. How can you decide a good value for k?
+    A "good" value for k is one that has a low error rate on the test set, we evaluate this by generating several models with different values of k and choosing the one with the lowest error rate.
+3. Can you use KNN to classify non-linearly separable data?
+    Yes, you can use KNN to classify non-linearly separable data, but it will be more difficult to find a good value for k.
+4. Is KNN sensible to the number of features in the dataset?
+    KNN is not necessarily sensible to the number of features, but with more dimensions the calculations will be a lot more expensive, it can therefore be relevant to use PCA or other dimensionality reduction techniques to reduce the number of dimensions.
+5. Can you use KNN for a regression problem?
+    Yes. The predicted value of the new data point is computed by calculating the average of the k closest neighbors values.
+6. What are the pros and cons of KNN?
+    Pros: Simple to understand, easy to implement, and can be used for both classification and regression.
+    Cons: Computationally expensive, and sensitive to irrelevant features.
+
+Part 3:
+1. What is the basic idea/intuition of SVM?
+    The basic idea of SVM is to find a line/vector/hyperplane which separates the data into two classes, the line/vector/hyperplane is chosen to be the one which maximizes the margin between the two classes.
+2. What can you do if the data is not linearly separable?
+    If the data is not linearly separable, you can use a kernel trick to transform the data into a higher dimension, where it is linearly separable.
+3. Explain the concept of soft margins
+    Soft margins are used to allow some data points to be on the wrong side of the margin, this is done to allow for some misclassification of the data.
+4. What are the pros and cons of SVM?
+    Pros: Works well with high dimensional data, and can be used for both classification and regression.
+    Cons: Can be slow to train, and can be difficult to tune.
