@@ -6,6 +6,8 @@ from sklearn.model_selection import train_test_split
 import sklearn
 from sklearn.datasets import load_files
 import nltk
+from sklearn.feature_extraction.text import CountVectorizer
+from sklearn.feature_extraction.text import TfidfTransformer
 
 moviedir = "./movie_reviews"
 movie = load_files(moviedir, shuffle=True)
@@ -59,10 +61,9 @@ text_clf = Pipeline([('vect', CountVectorizer()),
                      ])
 text_clf.fit(docs_train, y_train)  # train on training set
 # use grid search to find best parameters
-parameters = {'vect__ngram_range': [(1, 1), (1, 2)],
+parameters = {'vect__ngram_range': [(1, 1), (1, 2), (1, 3)],
               'tfidf__use_idf': (True, False),
-              'clf__alpha': (1e-2, 1e-3),
-              }
+              'clf__alpha': (1e-2, 1e-3, 1e-4)}
 gs_clf = GridSearchCV(text_clf, parameters, n_jobs=-1)
 gs_clf = gs_clf.fit(docs_train, y_train)
 print(gs_clf.best_score_)

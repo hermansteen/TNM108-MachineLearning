@@ -1,0 +1,17 @@
+Part 1:
+1. What is the TF-IDF measure?
+    TF gives us information on how often a term appears in a document and IDF gives us information about the relative rarity of a term in the collection of documents. By multiplying these values together we can get our final TF-IDF value.
+2. How can we use TF-IDF to
+    Rank document similarity?
+        Using a vectorized version of the document we can calculate cosine similarity between two given documents and thereby rank their similarity to one another.
+    Classify text? 
+        TF-IDF determines how important a word is by weighing its frequency of occurence in the document and computing how often the same word occurs in other documents. If a word occurs many times in a particular document but not in others, then it might be highly relevant to that particular document and is therefore assigned more importance.
+        The same principle can be applied to the importance of words to classify their category or sentiment, for example: how often to we use the word "awful" for something with positive sentiment? How often for negative?
+Part 2:
+    Best params:
+    Use-idf: False
+    ngram-range: (1, 2)
+    alpha: 0.01
+Part 3:
+    1. Explain the textrank algorithm
+        TextRank is a graph-based ranking algorithm that uses the similarity between words to determine their importance. It is a variant of PageRank, which is a graph-based ranking algorithm that uses the similarity between webpages to determine their importance. The similarity between words is determined by the number of times they appear in the same sentence. The similarity between sentences is determined by the number of times they appear in the same document. The similarity between documents is determined by the number of times they appear in the same corpus.
